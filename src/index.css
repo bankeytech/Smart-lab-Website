@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+:root {
+  /* Brand Greens */
+  --dark-green: #051F20;
+  --deep-green: #0B2B26;
+  --primary-green: #163832;
+  --muted-green: #235347;
+  --soft-green: #8EB69B;
+  --light-mint: #DAF1DE;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--dark-green), var(--primary-green));
+}
