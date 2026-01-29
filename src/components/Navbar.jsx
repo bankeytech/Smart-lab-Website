@@ -58,7 +58,7 @@ const Navbar = () => {
             {/* <!-- Right aligned login/register buttons --> */}
             <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
-                    <Link className="block rounded-md px-5 py-2.5 font-semibold bg-[var(--soft-green)] text-[var(--dark-green)] hover:bg-[var(--light-mint)] transition" to="/contact">
+                    <Link className="block rounded-md px-5 py-2.5 font-semibold bg-[var(--soft-green)] text-[var(--dark-green)] hover:bg-[var(--light-mint)] transition" to="/join-us">
                         Join us
                     </Link>
                 </div>
