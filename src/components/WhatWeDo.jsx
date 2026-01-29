@@ -12,7 +12,7 @@ const WhatWeDo = () => {
           </h2>
 
           {/* Hardware */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-5">
             <div className="text-[#163832]">
               <h3 className="font-semibold text-xl md:text-2xl mb-4">
                 Hardware Division

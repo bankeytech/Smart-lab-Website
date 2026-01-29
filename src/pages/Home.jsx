@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import WhatWeDo from '../components/WhatWeDo'
 import HowWeWork from '../components/HowWeWork'
 import CTA from '../components/CTA'
+import FeaturedProject from '../components/FeaturedProject'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <WhatWeDo />
       <HowWeWork />
+      <FeaturedProject />
       <CTA />
     </div>
   )

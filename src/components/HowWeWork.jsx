@@ -31,7 +31,7 @@ const HowWeWork = () => {
         }
     ]
   return (
-    <div className='bg-gradient-to-br from-[#051F20] to-[#163832] min-h-screen'>
+    <div className='bg-gradient-to-br from-[#051F20] to-[#163832] '>
         <div className='max-w-screen-xl mx-auto px-6 md:px-10'>
             <h2 className='text-4xl font-bold leading-tight mb-8 text-[#DAF1DE] text-center'>How We Work</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-[#163832]'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const CTA = () => {
   return (
-    <section className='bg-gradient-to-bl from-[#163832] to-[#051F20] min-h-screen'>
+    <section className='bg-gradient-to-bl from-[#163832] to-[#051F20] h-100'>
         <div className='max-w-screen-xl mx-auto px-6 md:px-10'>
              <div className="bg-[#DAF1DE] p-8 md:p-12 rounded-3xl flex items-center justify-center flex-col">
                 <h2 className="text-[#163832] text-3xl md:text-4xl font-bold text-center mb-6">
