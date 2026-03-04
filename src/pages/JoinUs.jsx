@@ -163,7 +163,7 @@ const JoinUs = () => {
                 name="interest"
                 value={formData.interest}
                 onChange={handleChange}
-                className='w-full pl-4 py-2 outline-none rounded-md bg-white'
+                className='w-full pl-4 py-2 outline-none rounded-md bg-[#DAF1DE]/90'
               >
                 <option value="software">Software</option>
                 <option value="hardware">Hardware</option>

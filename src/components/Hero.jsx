@@ -34,7 +34,7 @@ const Hero = () => {
             {/* Stats */}
             <div className="mt-15 ">
                 <hr className="border-[#DAF1DE]"/>
-                <div className="flex justify-start gap-26 max-w-screen-xl px-6 md:px-10 text-[#DAF1DE] py-15">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-screen-xl mx-auto w-full px-6 md:px-10 text-[#DAF1DE] py-10 md:py-15">
                     <div>
                         <h3 className="text-3xl font-bold mb-3">24+</h3>
                         <p>Active Projects</p>
