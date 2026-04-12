@@ -7,14 +7,14 @@ const Navbar = () => {
 
   return (
     <div>
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--dark-green)] text-[var(--light-mint)] ">
-        <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-(--dark-green) text-(--light-mint) ">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-2 sm:px-6 lg:px-8">
             <Link className="block" to="/">
                 <span className="sr-only">Home</span>
-                <p className='flex items-center gap-2'>
-                    <img src={Lpic} className="w-12 rounded-2xl"/>
-                    <h1 className='text-sm font-bold'>Smart Systems <br />Research Laboratory</h1>
-                </p>
+                <div className='flex items-center gap-1.5 sm:gap-2'>
+                    <img src={Lpic} className="w-8 sm:w-10 lg:w-12 rounded-xl sm:rounded-2xl"/>
+                    <h1 className='text-[10px] sm:text-xs lg:text-sm font-bold leading-tight'>Smart Systems <br />Research Laboratory</h1>
+                </div>
             </Link>
 
             {/* Centered menu links */}
@@ -37,11 +37,11 @@ const Navbar = () => {
                                 </svg>
                             </button>
                             {/* Dropdown Menu */}
-                            <div className="absolute left-0 mt-2 w-48 bg-[var(--dark-green)] border border-[var(--light-mint)] rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                                <Link to="/divisions/hardware" className="block px-4 py-2 hover:bg-[var(--soft-green)] hover:text-[var(--dark-green)] transition">
+                            <div className="absolute left-0 mt-2 w-48 bg-(--dark-green) border border-(--light-mint) rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <Link to="/divisions/hardware" className="block px-4 py-2 hover:bg-(--soft-green) hover:text-(--dark-green) transition">
                                     Hardware
                                 </Link>
-                                <Link to="/divisions/software" className="block px-4 py-2 hover:bg-[var(--soft-green)] hover:text-[var(--dark-green)] transition">
+                                <Link to="/divisions/software" className="block px-4 py-2 hover:bg-(--soft-green) hover:text-(--dark-green) transition">
                                     Software
                                 </Link>
                             </div>
@@ -59,16 +59,16 @@ const Navbar = () => {
             </div>
 
             {/* <!-- Right aligned login/register buttons --> */}
-            <div className="flex items-center gap-4">
-                <div className="sm:flex sm:gap-4">
-                    <Link className="block rounded-md px-5 py-2.5 font-semibold bg-[var(--soft-green)] text-[var(--dark-green)] hover:bg-[var(--light-mint)] transition" to="/join-us">
+            <div className="flex items-center gap-2 sm:gap-4">
+                <div className="flex sm:gap-4">
+                    <Link className="block rounded-md px-3 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-semibold bg-(--soft-green) text-(--dark-green) hover:bg-(--light-mint) transition" to="/join-us">
                         Join us
                     </Link>
                 </div>
 
                 <button 
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="block rounded-sm p-2.5 bg-[var(--dark-green)] text-[var(--light-mint)] transition md:hidden"
+                    className="block rounded-sm p-2 bg-(--dark-green) text-(--light-mint) transition md:hidden"
                 >
                     <span className="sr-only">Toggle menu</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -80,7 +80,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-700 bg-[var(--dark-green)]">
+            <div className="md:hidden border-t border-gray-700 bg-(--dark-green)">
                 <nav aria-label="Global">
                     <ul className="flex flex-col items-center gap-6 py-4 text-sm">
                         <li>
@@ -92,8 +92,8 @@ const Navbar = () => {
                         <li className="text-center w-full">
                             <span className="block text-gray-400 mb-2">Divisions</span>
                             <div className="flex flex-col gap-2 bg-[#0a2e2f] py-2 rounded">
-                                <Link className="block hover:text-[var(--light-mint)]" to="/divisions/hardware" onClick={() => setIsMenuOpen(false)}> Hardware </Link>
-                                <Link className="block hover:text-[var(--light-mint)]" to="/divisions/software" onClick={() => setIsMenuOpen(false)}> Software </Link>
+                                <Link className="block hover:text-(--light-mint)" to="/divisions/hardware" onClick={() => setIsMenuOpen(false)}> Hardware </Link>
+                                <Link className="block hover:text-(--light-mint)" to="/divisions/software" onClick={() => setIsMenuOpen(false)}> Software </Link>
                             </div>
                         </li>
                         <li>

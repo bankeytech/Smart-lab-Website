@@ -62,9 +62,7 @@ const About = () => {
                 <h3 className="font-bold text-xl">Our Mission</h3>
               </div>
               <p>
-                To empower students to build impactful engineering solutions through collaboration
-                and hands-on learning. We bridge the gap between academic theory and real-world
-                application.
+                To be a profitable tech firm leading innovations & supporting solutions that build and secure the future of Africa.
               </p>
             </div>
 
@@ -74,8 +72,7 @@ const About = () => {
                 <h3 className="font-bold text-xl">Our Vision</h3>
               </div>
               <p>
-                To become a leading student-driven research and innovation lab where the next
-                generation of engineers and creators are forged.
+                To unlock tomorrow’s technology, today.
               </p>
             </div>
           </div>
