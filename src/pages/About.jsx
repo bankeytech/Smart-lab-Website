@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBullseye, FaBolt } from "react-icons/fa";
+import { FaBullseye, FaBolt, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { MdVisibility, MdGroups, MdRocketLaunch, MdEmojiEvents } from "react-icons/md";
 
 const coreValues = [
@@ -30,40 +30,55 @@ const About = () => {
     <div className="bg-gradient-to-br from-[#051F20] to-[#163832] min-h-screen text-[#DAF1DE]">
       <div className="max-w-screen-xl mx-auto px-6 md:px-10 pt-20 pb-20">
         {/* About Intro */}
-        <div className="flex flex-col gap-6 items-center justify-center">
-          <h3 className="text-4xl font-bold">About The Lab</h3>
-          <p className="text-lg max-w-2xl text-center">
+        <div className="flex flex-col pt-10 gap-6 justify-center">
+          <h3 className="text-xl font-bold">About Us</h3>
+          {/* <p className="text-lg max-w-2xl text-center">
             The lab was created to provide students with a collaborative space to explore
             technology beyond the classroom. It serves as a hub for innovation, experimentation,
             and teamwork.
-          </p>
+          </p> */}
         </div>
+
+        <div className="flex justify-between pt-5 gap-4">
+          <h3 className="text-5xl font-bold leading-15">Shaping the future of Technology</h3>
+          <p className="text-md flex items-end w-160">We focus on the details of everything we do. All to help businesses around 
+            the world focus on what's most important to them. We take pride in this. </p>
+        </div>
+
+        
 
         {/* Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-20">
-          <div className="p-5 bg-[#DAF1DE] text-[#163832] rounded-xl">
-            <div className="flex gap-3 items-center pb-4">
-              <FaBullseye className="bg-[#163832] text-[#DAF1DE] w-9 h-9 p-2 rounded-lg" />
-              <h3 className="font-bold text-xl">Our Mission</h3>
-            </div>
-            <p>
-              To empower students to build impactful engineering solutions through collaboration
-              and hands-on learning. We bridge the gap between academic theory and real-world
-              application.
-            </p>
+        <div className="flex justify-between items-end gap-4 pt-20">
+          <div className="w-1/2">
+            <img src="./src/assets/imag2.jpg" alt="Image" />
           </div>
-
-          <div className="p-5 bg-[#DAF1DE] text-[#163832] rounded-xl">
-            <div className="flex gap-3 items-center pb-4">
-              <MdVisibility className="bg-[#163832] text-[#DAF1DE] w-9 h-9 p-2 rounded-lg" />
-              <h3 className="font-bold text-xl">Our Vision</h3>
+          
+          <div className="flex flex-col gap-4 w-1/2">
+            <div className="p-5 bg-[#DAF1DE] text-[#163832] rounded-xl">
+              <div className="flex gap-3 items-center pb-4">
+                <FaBullseye className="bg-[#163832] text-[#DAF1DE] w-9 h-9 p-2 rounded-lg" />
+                <h3 className="font-bold text-xl">Our Mission</h3>
+              </div>
+              <p>
+                To empower students to build impactful engineering solutions through collaboration
+                and hands-on learning. We bridge the gap between academic theory and real-world
+                application.
+              </p>
             </div>
-            <p>
-              To become a leading student-driven research and innovation lab where the next
-              generation of engineers and creators are forged.
-            </p>
+
+            <div className="p-5 bg-[#DAF1DE] text-[#163832] rounded-xl">
+              <div className="flex gap-3 items-center pb-4">
+                <MdVisibility className="bg-[#163832] text-[#DAF1DE] w-9 h-9 p-2 rounded-lg" />
+                <h3 className="font-bold text-xl">Our Vision</h3>
+              </div>
+              <p>
+                To become a leading student-driven research and innovation lab where the next
+                generation of engineers and creators are forged.
+              </p>
+            </div>
           </div>
         </div>
+        
 
         {/* Core Values */}
         <div className="pt-20">
@@ -76,6 +91,57 @@ const About = () => {
                 <p className="text-sm md:text-base">{desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Meet the Team */}
+        <div className="pt-20">
+          <div className="flex flex-col items-center justify-center">
+            <h3 className="text-4xl font-bold pb-6">Meet our Team</h3>
+            <p className="text-lg max-w-2xl text-center">Our philosophy is simple -- hire a team of diverse, passionate people 
+              and foster a culture that empower you to do you the best work.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-20">
+            <div className="flex flex-col items-center">
+              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <h3 className="font-semibold text-lg pt-4">Prof.Mrs Folasade Dahunsi </h3>
+              <p>Founder & CEO </p>
+              <p className="flex gap-4 pt-2">
+                <FaTwitter />
+                <FaLinkedin />
+                <FaFacebook />
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <h3 className="font-semibold text-lg pt-4">Dahunsi Ayomide </h3>
+              <p>Founder & CEO </p>
+              <p className="flex gap-4 pt-2">
+                <FaTwitter />
+                <FaLinkedin />
+                <FaFacebook />
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <h3 className="font-semibold text-lg pt-4">Adegite Adejire</h3>
+              <p>Hardware Team Lead</p>
+              <p className="flex gap-4 pt-2">
+                <FaTwitter />
+                <FaLinkedin />
+                <FaFacebook />
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <h3 className="font-semibold text-lg pt-4">Covenant Joshua</h3>
+              <p>Software Team Lead</p>
+              <p className="flex gap-4 pt-2">
+                <FaTwitter />
+                <FaLinkedin />
+                <FaFacebook />
+              </p>
+            </div>
           </div>
         </div>
       </div>

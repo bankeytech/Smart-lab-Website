@@ -7,11 +7,14 @@ const Navbar = () => {
 
   return (
     <div>
-    <header className=" bg-[var(--dark-green)] text-[var(--light-mint)] ">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--dark-green)] text-[var(--light-mint)] ">
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
             <Link className="block" to="/">
                 <span className="sr-only">Home</span>
-                <img src={Lpic} className="w-12 rounded-2xl"/>
+                <p className='flex items-center gap-2'>
+                    <img src={Lpic} className="w-12 rounded-2xl"/>
+                    <h1 className='text-sm font-bold'>Smart Systems <br />Research Laboratory</h1>
+                </p>
             </Link>
 
             {/* Centered menu links */}

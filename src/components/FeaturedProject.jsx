@@ -1,6 +1,7 @@
 import React from 'react';
 import Fcon from '../assets/Frame 1.png';
 import Scon from "../assets/Span 1.png";
+import { Link } from 'react-router-dom';
 
 const FeaturedProject = () => {
   const projects = [
@@ -43,9 +44,9 @@ const FeaturedProject = () => {
               A snapshot of some of the innovative projects currently being developed.
             </p>
 
-            <button className='flex items-center gap-2 font-semibold hover:underline'>
+            <Link to="/projects" className='flex items-center gap-2 font-semibold hover:underline'>
               View All Projects →
-            </button>
+            </Link>
           </div>
         </div>
 

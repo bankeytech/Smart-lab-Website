@@ -1,5 +1,5 @@
 import React from 'react'
-import Tpic from '../assets/test1.png'
+import Tpic from '../assets/pic.png'
 
 const Hero = () => {
   return (
