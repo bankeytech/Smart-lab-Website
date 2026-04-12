@@ -1,6 +1,8 @@
 import React from "react";
 import { FaBullseye, FaBolt, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { MdVisibility, MdGroups, MdRocketLaunch, MdEmojiEvents } from "react-icons/md";
+import Jpic from "../assets/imag2.jpg";
+import Ypic from "../assets/pp1.webp";
 
 const coreValues = [
   {
@@ -50,7 +52,7 @@ const About = () => {
         {/* Mission & Vision */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8 md:gap-4 pt-16 md:pt-20">
           <div className="w-full md:w-1/2">
-            <img src="./src/assets/imag2.jpg" alt="Image" className="rounded-xl w-full h-auto object-cover" />
+            <img src={Jpic} alt="Image" className="rounded-xl w-full h-auto object-cover" />
           </div>
           
           <div className="flex flex-col gap-4 w-full md:w-1/2">
@@ -103,7 +105,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 md:pt-20">
             <div className="flex flex-col items-center">
-              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <img src={Ypic}className="rounded-full" alt="Image" />
               <h3 className="font-semibold text-lg pt-4">Prof.Mrs Folasade Dahunsi </h3>
               <p>Founder & CEO </p>
               <p className="flex gap-4 pt-2">
@@ -113,7 +115,7 @@ const About = () => {
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <img src={Ypic} className="rounded-full" alt="Image" />
               <h3 className="font-semibold text-lg pt-4">Dahunsi Ayomide </h3>
               <p>Founder & CEO </p>
               <p className="flex gap-4 pt-2">
@@ -123,7 +125,7 @@ const About = () => {
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <img src={Ypic} className="rounded-full" alt="Image" />
               <h3 className="font-semibold text-lg pt-4">Adegite Adejire</h3>
               <p>Hardware Team Lead</p>
               <p className="flex gap-4 pt-2">
@@ -133,7 +135,7 @@ const About = () => {
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
+              <img src={Ypic} className="rounded-full" alt="Image" />
               <h3 className="font-semibold text-lg pt-4">Covenant Joshua</h3>
               <p>Software Team Lead</p>
               <p className="flex gap-4 pt-2">
