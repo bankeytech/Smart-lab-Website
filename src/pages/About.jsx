@@ -39,21 +39,21 @@ const About = () => {
           </p> */}
         </div>
 
-        <div className="flex justify-between pt-5 gap-4">
-          <h3 className="text-5xl font-bold leading-15">Shaping the future of Technology</h3>
-          <p className="text-md flex items-end w-160">We focus on the details of everything we do. All to help businesses around 
+        <div className="flex flex-col md:flex-row justify-between pt-5 gap-6 md:gap-4">
+          <h3 className="text-4xl md:text-5xl font-bold leading-tight">Shaping the future of Technology</h3>
+          <p className="text-base md:text-lg flex items-end w-full md:max-w-lg lg:max-w-xl">We focus on the details of everything we do. All to help businesses around 
             the world focus on what's most important to them. We take pride in this. </p>
         </div>
 
         
 
         {/* Mission & Vision */}
-        <div className="flex justify-between items-end gap-4 pt-20">
-          <div className="w-1/2">
-            <img src="./src/assets/imag2.jpg" alt="Image" />
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8 md:gap-4 pt-16 md:pt-20">
+          <div className="w-full md:w-1/2">
+            <img src="./src/assets/imag2.jpg" alt="Image" className="rounded-xl w-full h-auto object-cover" />
           </div>
           
-          <div className="flex flex-col gap-4 w-1/2">
+          <div className="flex flex-col gap-4 w-full md:w-1/2">
             <div className="p-5 bg-[#DAF1DE] text-[#163832] rounded-xl">
               <div className="flex gap-3 items-center pb-4">
                 <FaBullseye className="bg-[#163832] text-[#DAF1DE] w-9 h-9 p-2 rounded-lg" />
@@ -83,7 +83,7 @@ const About = () => {
         {/* Core Values */}
         <div className="pt-20">
           <h3 className="text-4xl font-bold text-center">Core Values</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 md:pt-20">
             {coreValues.map(({ title, desc, icon: Icon }) => (
               <div key={title} className="flex flex-col">
                 <Icon className="bg-[#163832] text-[#DAF1DE] w-9 h-9 p-2 rounded-lg mb-3" />
@@ -101,7 +101,7 @@ const About = () => {
             <p className="text-lg max-w-2xl text-center">Our philosophy is simple -- hire a team of diverse, passionate people 
               and foster a culture that empower you to do you the best work.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 md:pt-20">
             <div className="flex flex-col items-center">
               <img src="./src/assets/pp1.webp"className="rounded-full" alt="Image" />
               <h3 className="font-semibold text-lg pt-4">Prof.Mrs Folasade Dahunsi </h3>
