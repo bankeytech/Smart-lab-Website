@@ -39,7 +39,7 @@ const Footer = () => {
                         </a>
                         <a href='#' className='text-[#DAF1DE] hover:text-[#DAF1DE] transition duration-300 ease-in-out flex gap-2'>
                             <MdLocationOn/>
-                            <p className='text-sm'>University Campus Engineering Building, Room 304</p>
+                            <p className='text-sm'>Beside SLIT, FUTA, OBANLA, AKURE, ONDO STATE, Nigeria.</p>
                         </a>
                     </div>
                 </div>
