@@ -20,97 +20,124 @@ const SoftwareDivision = () => {
     {
       title: "Automation Tools",
       desc: "Scripts and utilities to streamline workflows"
+    },
+    {
+      title: "Mobile App Development",
+      desc: "Native and cross-platform applications for iOS and Android"
+    },
+    {
+      title: "Game Development",
+      desc: "Interactive experiences from casual mobile games to immersive worlds"
+    },
+    {
+      title: "3D Design & Development",
+      desc: "Modeling, rendering, and real-time 3D experiences"
     }
   ]
 
   const tools = [
-    "React",
-    "TypeScript",
-    "Node.js",
-    "Python",
-    "PostgreSQL",
-    "Docker",
-    "Git",
-    "AWS",
-    "TensorFlow",
-    "Next.js"
+    "React", "TypeScript", "Node.js", "Python", 
+    "PostgreSQL", "Docker", "Git", "AWS", 
+    "TensorFlow", "Next.js"
   ]
 
   return (
-    <div className="bg-gradient-to-br from-[#051F20] to-[#163832] min-h-screen text-[#DAF1DE]">
-      <div className="max-w-screen-xl mx-auto px-6 md:px-10 pt-20 pb-20">
+    <div className="bg-[#051F20] min-h-screen text-[#DAF1DE] relative overflow-hidden selection:bg-[#DAF1DE] selection:text-[#051F20]">
+      {/* Premium Background Accents */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#163832] rounded-full blur-[120px] opacity-40 animate-pulse" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#163832] rounded-full blur-[120px] opacity-40 animate-pulse" />
 
-        {/* Header */}
-        <div className="max-w-lg pb-14">
-          <h1 className="text-4xl font-bold mb-4">Software Division</h1>
-          <p>
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 md:px-10 py-16 md:py-24">
+
+        {/* Header Section with Fade-in */}
+        <div className="max-w-2xl pb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Software Division</h1>
+          <p className="text-lg text-[#DAF1DE]/80 leading-relaxed">
             The software division designs and develops digital systems that power 
             applications, platforms, and intelligent solutions. We turn algorithms 
-            into impact.
+            into impact through clean code and scalable architecture.
           </p>
         </div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-          {/* What We Build */}
-          <div>
-            <div className="flex gap-3 items-center pb-8">
-              <img src={Bcon} alt="img"/>
-              <h2 className="font-bold text-lg md:text-xl">         
-              What We Build
-            </h2>
+          {/* What We Build Section */}
+          <section className="animate-in fade-in slide-in-from-left-4 duration-700 delay-200">
+            <div className="flex gap-4 items-center pb-10 border-b border-[#DAF1DE]/10 mb-10">
+              <img src={Bcon} alt="" className="w-8 h-8 object-contain" />
+              <h2 className="font-bold text-2xl md:text-3xl tracking-tight">What We Build</h2>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="grid gap-8">
               {whatWeBuild.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <img
-                    src={Vcon}
-                    alt="List item icon"
-                    className="w-5 h-5 mt-1"
-                  />
+                <div 
+                  key={index} 
+                  className="group flex gap-5 p-4 rounded-xl hover:bg-[#DAF1DE]/5 transition-all duration-300 border border-transparent hover:border-[#DAF1DE]/10"
+                >
+                  <div className="flex-shrink-0">
+                    <img
+                      src={Vcon}
+                      alt=""
+                      className="w-6 h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                   <div>
-                    <p className="font-semibold">{item.title}</p>
-                    <p className="text-sm">{item.desc}</p>
+                    <h3 className="font-semibold text-lg text-[#DAF1DE] mb-1 group-hover:translate-x-1 transition-transform">{item.title}</h3>
+                    <p className="text-[#DAF1DE]/70 leading-snug group-hover:text-[#DAF1DE]/90 transition-colors">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Tools & Technologies */}
-          <div className="bg-[#DAF1DE] text-[#163832] p-6 rounded-lg">
-            <h2 className="font-bold text-lg md:text-xl pb-6">
-              Tools & Technologies
-            </h2>
+          {/* Side Panel: Tools & CTA */}
+          <aside className="space-y-10 animate-in fade-in slide-in-from-right-4 duration-700 delay-300">
+            {/* Tools & Technologies Card */}
+            <div className="bg-[#DAF1DE] text-[#163832] p-8 md:p-10 rounded-2xl shadow-2xl relative overflow-hidden group">
+              {/* Subtle Decorative Element */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#163832]/5 rounded-bl-full -mr-10 -mt-10 group-hover:scale-110 transition-transform duration-500" />
+              
+              <h2 className="font-bold text-2xl mb-8 border-b border-[#163832]/10 pb-4">
+                Tools & Technologies
+              </h2>
 
-            <div className="flex flex-wrap gap-3 pb-6">
-              {tools.map((tool, index) => (
-                <span
-                  key={index}
-                  className="border border-[#163832] px-4 py-1 rounded text-sm
-                             hover:bg-[#163832] hover:text-[#DAF1DE] transition"
+              <div className="flex flex-wrap gap-3 mb-10">
+                {tools.map((tool, index) => (
+                  <span
+                    key={index}
+                    className="border border-[#163832]/20 px-4 py-1.5 rounded-full text-sm font-medium
+                               hover:bg-[#163832] hover:text-[#DAF1DE] hover:border-[#163832] 
+                               hover:shadow-lg active:scale-95 transition-all duration-200 cursor-default"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+
+              {/* Recruitment CTA Section */}
+              <div className="bg-[#163832] text-[#DAF1DE] p-6 md:p-8 rounded-xl shadow-inner group/cta">
+                <h4 className="font-bold text-xl mb-3">Join Our Software Team</h4>
+                <p className="text-[#DAF1DE]/80 mb-6 leading-relaxed">
+                  Passionate about coding, AI, or system design? We're always looking for brilliant minds to join our lab.
+                </p>
+                <button
+                  className="w-full md:w-auto bg-transparent border-2 border-[#DAF1DE] px-8 py-3 rounded-lg font-bold
+                             hover:bg-[#DAF1DE] hover:text-[#163832] transition-all duration-300 
+                             focus:ring-2 focus:ring-offset-2 focus:ring-[#DAF1DE] active:scale-[0.98]"
                 >
-                  {tool}
-                </span>
-              ))}
+                  Apply Now
+                </button>
+              </div>
             </div>
 
-            {/* CTA */}
-            <div className="bg-[#163832]/90 text-[#DAF1DE] p-5 rounded-lg">
-              <h5 className="font-bold">Join Software Team</h5>
-              <p className="text-sm py-2">
-                Passionate about coding, design, or AI?
+            {/* Scientific Lab Note (Bonus Detail) */}
+            <div className="border border-[#DAF1DE]/20 p-6 rounded-xl bg-[#163832]/30 backdrop-blur-sm">
+              <p className="text-sm italic text-[#DAF1DE]/60">
+                "We provide the infrastructure for innovation, bridging the gap between theoretical research and production-ready systems."
               </p>
-              <button
-                className="border border-[#DAF1DE] px-4 py-2 mt-4 rounded text-sm
-                           hover:bg-[#DAF1DE] hover:text-[#163832] transition"
-              >
-                Apply Now
-              </button>
             </div>
-          </div>
+          </aside>
 
         </div>
       </div>

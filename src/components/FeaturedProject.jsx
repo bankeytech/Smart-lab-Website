@@ -32,8 +32,8 @@ const FeaturedProject = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-bl from-[#163832] to-[#051F20] min-h-screen text-[#DAF1DE] mt-24">
-      <div className="max-w-screen-xl mx-auto px-6 md:px-10 pt-8 pb-24">
+    <section className="bg-gradient-to-bl from-[#163832] to-[#051F20] text-[#DAF1DE]">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-10 pt-8 pb-10">
 
         {/* Header */}
         <div className='flex flex-col gap-2 mb-10'>

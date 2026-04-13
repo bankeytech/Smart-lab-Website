@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const CTA = () => {
   return (
-    <section className='bg-gradient-to-bl from-[#163832] to-[#051F20] py-12 md:py-20'>
+    <section className='bg-gradient-to-br from-[#051F20] to-[#163832] py-12 md:py-20'>
         <div className='max-w-screen-xl mx-auto px-6 md:px-10'>
              <div className="bg-[#DAF1DE] p-6 sm:p-10 md:p-16 rounded-3xl flex items-center justify-center flex-col">
                 <h2 className="text-[#163832] text-2xl sm:text-3xl md:text-5xl font-extrabold text-center mb-4 leading-tight">

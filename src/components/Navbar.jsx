@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Lpic from "../assets/smart_lab_logo-X.png"
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDivisionsOpen, setIsDivisionsOpen] = useState(false);
 
   return (
     <div>
@@ -52,6 +54,10 @@ const Navbar = () => {
                         </li>
 
                         <li>
+                            <Link className=" " to="/member"> Team </Link>
+                        </li>
+
+                        <li>
                             <Link className=" " to="/contact"> Contact </Link>
                         </li>
                     </ul>
@@ -67,45 +73,80 @@ const Navbar = () => {
                 </div>
 
                 <button 
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    onClick={() => {
+                        setIsMenuOpen(!isMenuOpen);
+                        setIsDivisionsOpen(false); // Reset dropdown when main menu toggles
+                    }}
                     className="block rounded-sm p-2 bg-(--dark-green) text-(--light-mint) transition md:hidden"
                 >
                     <span className="sr-only">Toggle menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                    {isMenuOpen ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    )}
                 </button>
             </div>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-700 bg-(--dark-green)">
-                <nav aria-label="Global">
-                    <ul className="flex flex-col items-center gap-6 py-4 text-sm">
-                        <li>
-                            <Link className="block" to="/" onClick={() => setIsMenuOpen(false)}> Home </Link>
-                        </li>
-                        <li>
-                            <Link className="block" to="/projects" onClick={() => setIsMenuOpen(false)}> Projects </Link>
-                        </li>
-                        <li className="text-center w-full">
-                            <span className="block text-gray-400 mb-2">Divisions</span>
-                            <div className="flex flex-col gap-2 bg-[#0a2e2f] py-2 rounded">
-                                <Link className="block hover:text-(--light-mint)" to="/divisions/hardware" onClick={() => setIsMenuOpen(false)}> Hardware </Link>
-                                <Link className="block hover:text-(--light-mint)" to="/divisions/software" onClick={() => setIsMenuOpen(false)}> Software </Link>
-                            </div>
-                        </li>
-                        <li>
-                            <Link className="block" to="/about" onClick={() => setIsMenuOpen(false)}> About </Link>
-                        </li>
-                        <li>
-                            <Link className="block" to="/contact" onClick={() => setIsMenuOpen(false)}> Contact </Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        )}
+        <AnimatePresence>
+            {isMenuOpen && (
+                <motion.div 
+                    initial={{ x: '-100%', opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: '-100%', opacity: 0 }}
+                    transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                    className="md:hidden fixed inset-0 top-16 z-40 bg-(--dark-green) h-[calc(100vh-64px)] overflow-y-auto"
+                >
+                    <nav aria-label="Global">
+                        <ul className="flex flex-col items-center gap-8 py-8 px-6 text-4xl font-medium text-[#DAF1DE]">
+                            <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
+                                <Link className="block py-2" to="/" onClick={() => setIsMenuOpen(false)}> Home </Link>
+                            </motion.li>
+                            <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
+                                <Link className="block py-2" to="/projects" onClick={() => setIsMenuOpen(false)}> Projects </Link>
+                            </motion.li>
+                            <motion.li 
+                                initial={{ opacity: 0, x: -40 }} 
+                                animate={{ opacity: 1, x: 0 }} 
+                                transition={{ delay: 0.6 }}
+                                className="text-center w-full"
+                            >
+                                <button 
+                                    onClick={() => setIsDivisionsOpen(!isDivisionsOpen)}
+                                    className="flex items-center justify-center gap-1 w-full py-2 focus:outline-none"
+                                >
+                                    <span>Divisions</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-5 h-5 transition-transform duration-300 ${isDivisionsOpen ? 'rotate-180' : ''}`}>
+                                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </button>
+                                {isDivisionsOpen && (
+                                    <div className="flex flex-col gap-3 bg-[#0a2e2f] py-6 rounded-2xl md:bg-transparent border border-white/5 md:border-none shadow-inner animate-in fade-in slide-in-from-top-4 duration-300">
+                                        <Link className="block px-4 py-2 hover:text-(--light-mint) transition-colors text-base" to="/divisions/hardware" onClick={() => setIsMenuOpen(false)}> Hardware </Link>
+                                        <Link className="block px-4 py-2 hover:text-(--light-mint) transition-colors text-base" to="/divisions/software" onClick={() => setIsMenuOpen(false)}> Software </Link>
+                                    </div>
+                                )}
+                            </motion.li>
+                            <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }}>
+                                <Link className="block py-2" to="/about" onClick={() => setIsMenuOpen(false)}> About </Link>
+                            </motion.li>
+                            <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }}>
+                                <Link className="block py-2" to="/member" onClick={() => setIsMenuOpen(false)}> Team </Link>
+                            </motion.li>
+                            <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.0 }}>
+                                <Link className="block py-2" to="/contact" onClick={() => setIsMenuOpen(false)}> Contact </Link>
+                            </motion.li>
+                        </ul>
+                    </nav>
+                </motion.div>
+            )}
+        </AnimatePresence>
     </header>
 
     </div>

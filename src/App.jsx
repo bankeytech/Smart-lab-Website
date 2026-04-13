@@ -11,6 +11,7 @@ import SoftwareDivision from './pages/SoftwareDivision'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import JoinUs from './pages/JoinUs'
+import Member from './pages/Member'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/join-us" element={<JoinUs />} />
+            <Route path="/member" element={<Member />} />
           </Routes>
         </main>
         <Footer/>
