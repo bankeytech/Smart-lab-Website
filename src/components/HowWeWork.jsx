@@ -39,9 +39,9 @@ const HowWeWork = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className='text-4xl font-bold leading-tight mb-12 text-[#DAF1DE] text-center'
+                className='leading-tight mb-12 text-[#DAF1DE] text-center text-4xl md:text-5xl font-extrabold tracking-tight'
             >
-                How We Work
+                How We <span className='text-[#8EB69B]'>Work</span>
             </motion.h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-[#163832]'>
                 {CoreHowWeWork.map((item, index) => (

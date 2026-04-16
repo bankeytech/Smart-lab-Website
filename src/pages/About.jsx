@@ -171,7 +171,7 @@ const About = () => {
           >
             {[
               { name: "Prof. Mrs Folasade Dahunsi", role: "Founder & CEO" },
-              { name: "Dahunsi Ayomide", role: "Founder & CEO" },
+              { name: "Dahunsi Ayomiku", role: "Lab Manager" },
               { name: "Adegite Adejire", role: "Hardware Team Lead" },
               { name: "Covenant Joshua", role: "Software Team Lead" }
             ].map((member, idx) => (

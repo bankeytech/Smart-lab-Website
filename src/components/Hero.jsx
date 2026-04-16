@@ -104,7 +104,7 @@ const Hero = () => {
                 transition={{ duration: 0.8 }}
                 className="flex flex-col md:flex-row justify-between items-start md:items-center py-10 pt-20 pb-20 gap-6 md:gap-10 lg:gap-32 max-w-screen-xl mx-auto w-full px-6 md:px-10 text-[#DAF1DE]"
             >
-                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:w-1/3">Who We Are</h3>
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:w-1/3">Who We <span className='text-[#8EB69B]'>Are</span></h3>
                 <p className="text-base sm:text-lg md:text-xl md:w-2/3 lg:max-w-2xl text-left opacity-90 text-[#8EB69B]">
                     Smart Systems Research Laboratory (a modern tech company) 
                     stands as a pioneering laboratory dedicated to the advancement of 3D fabrications, prototyping, and innovative technology solutions.

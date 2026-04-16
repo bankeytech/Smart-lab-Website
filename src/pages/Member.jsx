@@ -109,7 +109,7 @@ const alumniData = [
 
 // Interns Data
 const internsData = [
-  { id: 1, name: "Damilola", role: "Frontend Intern", dept: "Engineering", image: "https://kimi-web-img.moonshot.cn/img/img.freepik.com/fbd53cb1c762c79bfe2a79d0e318a62dd283db56.jpg" },
+  { id: 1, name: "Damilol", role: "Frontend Intern", dept: "Engineering", image: "https://kimi-web-img.moonshot.cn/img/img.freepik.com/fbd53cb1c762c79bfe2a79d0e318a62dd283db56.jpg" },
   { id: 2, name: "Bankey", role: "Backend Intern", dept: "Engineering", image: "https://kimi-web-img.moonshot.cn/img/www.shutterstock.com/fd736b5d2ef9b0347086e7b02cdd4c4ed915457e.jpg" },
   { id: 3, name: "Michelle", role: "Design Intern", dept: "Product", image: "https://kimi-web-img.moonshot.cn/img/img.freepik.com/c9ad6da0ce9f45cf834cd7d33043c100f2b60aa0.jpg" },
   { id: 4, name: "Micah", role: "Data Intern", dept: "Analytics", image: "https://kimi-web-img.moonshot.cn/img/t3.ftcdn.net/0ce9154ac87c256b665af2d220a3a754cb1c95a8.jpg" },

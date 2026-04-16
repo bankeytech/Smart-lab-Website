@@ -91,8 +91,8 @@ const WhatWeDo = () => {
         <div className="bg-[#DAF1DE] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 overflow-hidden">
           
           {/* Header */}
-          <h2 className="text-[#163832] text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12">
-            What We Do
+          <h2 className="text-[#163832] text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12">
+            What We <span className='text-[#8EB69B]'>Do</span>
           </h2>
 
           {/* Carousel Container */}

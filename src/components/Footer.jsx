@@ -35,7 +35,7 @@ const Footer = () => {
                     <div className='flex flex-col space-y-4'>
                         <a href='#' className='text-[#DAF1DE] hover:text-[#DAF1DE] transition duration-300 ease-in-out flex gap-2'>
                             <MdEmail/>
-                            <p className='text-sm'>lab@email.com</p>
+                            <p className='text-sm'>Smartsystemslaboratory@gmail.com</p>
                         </a>
                         <a href='#' className='text-[#DAF1DE] hover:text-[#DAF1DE] transition duration-300 ease-in-out flex gap-2'>
                             <MdLocationOn/>

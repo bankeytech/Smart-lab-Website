@@ -6,14 +6,14 @@ const contactCards = [
   {
     title: "Email Us",
     desc: "For general inquiries and partnerships",
-    value: "lab@email.com",
+    value: "Smartsystemslaboratory@gmail.com",
     type: "email",
     icon: MdEmail,
   },
   {
     title: "Visit Us",
     desc: "Come see our lab in person",
-    value: "University Campus Engineering Building, Room 304",
+    value: "Beside SLIT, FUTA, OBANLA, AKURE, ONDO STATE, Nigeria.",
     type: "location",
     icon: MdLocationOn,
   },

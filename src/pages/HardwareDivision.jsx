@@ -2,6 +2,7 @@ import React from 'react'
 import Vcon from "../assets/Vector1.png"
 import Bcon from "../assets/Span2.png"
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const HardwareDivision = () => {
 
@@ -146,12 +147,12 @@ const HardwareDivision = () => {
                 <p className="text-[#DAF1DE]/70 mb-8 leading-relaxed relative z-10 font-medium">
                   Interested in building physical systems and working with your hands? We're looking for makers and engineers.
                 </p>
-                <button
+                <Link to="/join-us"
                   className="relative z-10 w-full md:w-auto bg-[#DAF1DE] text-[#163832] px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm
                              hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 active:scale-95"
                 >
                   Apply Now
-                </button>
+                </Link>
               </motion.div>
             </div>
 

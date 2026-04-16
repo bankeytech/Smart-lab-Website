@@ -135,7 +135,7 @@ const Projects = () => {
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                                     </span>
-                                    <span className="text-xs font-bold uppercase tracking-wider text-orange-600">Live Research</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider text-orange-600">Live</span>
                                 </>
                             ) : (
                                 <span className="text-xs font-bold uppercase tracking-wider text-teal-700 underline decoration-teal-700/30">Completed</span>
